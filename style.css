@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0; 
+
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+hr {
+    color: #272929;
+    border: solid;
+    border-radius: 50%;
+}
+
+/* fonts  */
+.roboto-fontSetter {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.audiowide-regular {
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-size: 2.2rem;
+    font-style: normal;
+}
+
+/* Style for the loading screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+/* Spinner style */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #ccc;
+    border-top: 6px solid rgba(0, 0, 0, 0.751);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+/* Animation for the spinner */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* navigation bar  */
+nav {
+    padding: 10px;
+    padding-bottom: 0;
+    /* position: sticky; */
+    top: 0;
+    border: 2px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.12rem;
+    z-index: 1;
+
+}
+
+nav .links ul {
+    display: flex;
+    /* gap: 0.1rem; */
+    list-style: none;
+}
+.hamburger{
+    display: none;
+}
+
+
+/* navigation buttons hover transition  */
+nav .links ul li {
+    transition: all ease 0.2s;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+
+}
+
+nav .links ul li:hover {
+    color: rgb(98, 97, 96);
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+}
+
+.joinUs {
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: white;
+    color: black
+}
+
+nav .logos {
+    gap: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* main  */
+main {
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+    overflow: hidden;
+}
+
+
+
+/* content over the video */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 40em;
+}
+
+.content * {
+    background-color: transparent;
+}
+
+#cont-para{
+    max-width: 50%;
+}
+
+.infoBox {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* decade stream button hover transition */
+.content button {
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: white;
+    font-size: large;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    padding: 1rem 1.2rem;
+    color: black
+}
+
+.content button:hover {
+    color: rgb(98, 97, 96);
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+}
+
+.content>h1 {
+    font-size: 5rem;
+}
+
+.content p {
+    font-size: 0.9rem;
+}
+
+/* aboutinfo */
+.aboutinfo {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+/* about */
+.about {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about p {
+    width: 50%;
+}
+
+/* works, domain*/
+.works,
+.domain,
+.patronage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.works .cards,
+.domain .cards,
+.patronage .cards {
+    display: grid;
+    max-width: 75%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* card */
+.works .card,
+.domain .card,
+.patronage .card {
+    padding: 20px;
+    max-width: 80%;
+    background-color: #1f1f1fa8;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.card img {
+    padding: 10px;
+    background: black;
+    border-radius: 35%;
+}
+
+.card p {
+    font-weight: lighter;
+    font-size: small;
+}
+
+/* patronage */
+.patronage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.patronage .cardsp {
+    display: grid;
+    max-width: 75%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* card */
+.patronage .cardp {
+    padding: 20px;
+    max-width: 80%;
+    background-color: #1f1f1fa8;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* footer  */
+footer {
+    /* height: 50vh; */
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ftr {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+}
+
+.location,
+.social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social img {
+    transition: all ease 0.2s;
+    cursor: pointer;
+    height: 40px;
+}
+
+.social span a {
+    color: #ffffff;
+}
+
+.social img:hover {
+    color: rgb(98, 97, 96);
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+}
+
+.members-button {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    border: 2px solid black;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.members-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.members-button.selected::after {
+    width: 100%;
+}
+
+
+/* post bearers */
+.postBearers {
+    display: block;
+    position: relative;
+    left: 12%;
+}
+
+.dp {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    /* border: 2px solid white; */
+}
+
+.dp img {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* scrolling animation */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 1050px) {
+    nav .links {
+        display: none;
+    }
+    .hamburger, .buttons-container{
+        display: flex;
+    }
+    .ham-menu {
+        display: none;
+        width: 100%;
+        background-color: #000000dc;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .ham-menu ul {
+        flex-direction: column;
+        padding: 20px;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .ham-menu ul li {
+        margin-bottom: 10px;
+        list-style: none;
+    }
+
+    .show {
+        display: flex;
+    }
+    .logos img{
+        height: 55px;
+    }
+    .logos .audiowide-regular{
+        font-size: 1.7rem;
+    }
+    .content {
+        gap: 20px;
+    }
+
+    .aboutinfo {
+        display: block;
+    }
+
+    .abtimg img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .about p {
+        width: auto;
+        padding: 25px;
+    }
+
+    .content>h1 {
+        font-size: 3rem;
+    }
+
+    .content p {
+        font-size: 0.8rem;
+    }
+    #cont-para{
+        max-width: none;
+    }
+
+    .works .cards,
+    .domain .cards,
+    .patronage .cardsp{
+        display: grid;
+        max-width: 75%;
+        grid-template-rows: unset;
+        grid-template-columns: unset;
+        gap: 20px;
+    }
+
+    footer{
+        grid-template-columns: unset;
+        gap: 5rem;
+    }
+
+    .infoBox {
+        flex-direction: column;
+        gap: 35px;
+        padding: 35px;
+    }
+    .cards{
+        position: relative;
+        left: -12%;
+    }
+    .cards .card{
+        width: 100%;
+        max-width: none;
+    }
+    .joinUs{
+        padding: 15px;
+    }
+}
