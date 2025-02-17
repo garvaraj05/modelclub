@@ -58,21 +58,21 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: 'smooth'
         });
     });
-    
+
 })
 //loading screen
 document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
-      // by default loading screen is visible and content is hidden
-      // Hide the loading screen
-      document.getElementById("loading-screen").style.display = "none";
-      // Show the main content
-      document.querySelector(".container").style.display="block"
-      document.querySelector(".container").scrollIntoView({ behavior: 'smooth' });
+        // by default loading screen is visible and content is hidden
+        // Hide the loading screen
+        document.getElementById("loading-screen").style.display = "none";
+        // Show the main content
+        document.querySelector(".container").style.display = "block"
+        document.querySelector(".container").scrollIntoView({ behavior: 'smooth' });
     }, 1500);
-  
-  });
+
+});
 
 // scrolling animation 
 document.addEventListener("DOMContentLoaded", function () {
@@ -90,26 +90,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); 
+    revealOnScroll();
 });
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector("#fb").addEventListener("click", function(){
-        window.location.href="https://www.facebook.com/modelclubbit";
+    document.querySelector("#fb").addEventListener("click", function () {
+        window.location.href = "https://www.facebook.com/modelclubbit";
     })
-    document.querySelector("#github").addEventListener("click", function(){
-        window.location.href="https://github.com/Model-Club-BIT-Sindri";
+    document.querySelector("#github").addEventListener("click", function () {
+        window.location.href = "https://github.com/Model-Club-BIT-Sindri";
     })
-    document.querySelector("#linkedin").addEventListener("click", function(){
-        window.location.href="https://www.linkedin.com/company/modelclub-bitsindri";
+    document.querySelector("#linkedin").addEventListener("click", function () {
+        window.location.href = "https://www.linkedin.com/company/modelclub-bitsindri";
     })
-    document.querySelector("#insta").addEventListener("click", function(){
-        window.location.href="https://www.instagram.com/modelclubbit/";
-    }) 
+    document.querySelector("#insta").addEventListener("click", function () {
+        window.location.href = "https://www.instagram.com/modelclubbit/";
+    })
 });
-
-
 
 
 

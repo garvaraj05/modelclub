@@ -5,9 +5,18 @@
 }
 
 body {
-    background-color: black;
+    /* background-color: rgb(0, 0, 0); */
+    /* background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(0, 0, 255)); */
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(2, 2, 46));
+  
+  /* Ensure the gradient is fixed and doesn't move when scrolling */
+  background-attachment: fixed;
+  
+  /* Make sure the background covers the entire viewport */
+  background-size: cover;
     color: white;
 }
+
 
 hr {
     color: #272929;
@@ -69,7 +78,8 @@ hr {
 nav {
     padding: 10px;
     padding-bottom: 0;
-    /* position: sticky; */
+    position: sticky;
+    background-color: black;
     top: 0;
     border: 2px solid rgb(0, 0, 0);
     display: flex;
@@ -364,6 +374,25 @@ footer {
     height: 100%;
     width: 100%;
 }
+.events{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.event{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.event img{
+    border-radius: 0;
+    height: 400px;
+}
+.vid{
+    height: 75vh;
+}
 
 
 /* scrolling animation */
@@ -478,5 +507,17 @@ footer {
     }
     .joinUs{
         padding: 15px;
+    }
+    .event{
+        display: grid;
+        gap: 50px;
+        grid-template-columns: 1fr;
+    }
+    .event img{
+        border-radius: 0;
+        height: 300px;
+    }
+    .vid{
+        height: 30vh;
     }
 }
